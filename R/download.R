@@ -1,10 +1,6 @@
 rfb_get_links <- function(ufs = NULL) {
   url_base <- glue::glue(
-    "http://idg.receita.fazenda.gov.br",
-    "/orientacao/tributaria/cadastros/",
-    "cadastro-nacional-de-pessoas-juridicas-cnpj/",
-    "dados-abertos-do-cnpj"
-  )
+    "http://200.152.38.155/CNPJ/")
   all_links <- url_base %>%
     httr::GET() %>%
     xml2::read_html() %>%
